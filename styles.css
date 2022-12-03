@@ -11,14 +11,14 @@ body {
 
 /*------------ HEADER ------------*/
 
+header {
+    margin: 0.625em 1.25em;
+}
+
 .logo {
     width: 1.5em;
     height: 1.5em;
     align-self: center;
-}
-
-header {
-    margin: 0.625em 1.25em;
 }
 
 .topnav, 
@@ -61,6 +61,7 @@ nav ul li a {
 }
 
 
+
 /*------------ CONTENT ------------*/
 
 /* INTRO */
@@ -69,7 +70,7 @@ nav ul li a {
 .intro-title,
 .blog-intro {
     margin: 0;
-    max-width: 700px;
+    max-width: 600px;
 }
 
 .intro {
@@ -90,7 +91,7 @@ nav ul li a {
     margin: 3em 1em;
     display: flex;
     flex-wrap: wrap;
-    flex: 1 400px;
+    flex: 1 600px;
     gap: 1.5em;
     justify-content: center;
 }
@@ -98,8 +99,8 @@ nav ul li a {
 .grid img {
     width: 100%;
     height: 70%;
-    max-width: 500vw;
-    max-height: 250vh;
+    max-width: 600vw;
+    max-height: 350vh;
 }
 
 .blog img,
@@ -154,21 +155,91 @@ footer p {
 }
 
 
-/* MEDIA QUERIES */
-
-@media (max-width: 480px) {
-
-}
-
 
 /* HAMBURGER MENU */
 
-/* Hide the links inside the navigation menu (except for logo/home) */
 .mylinks {
     display: none;
   }
 
-.topnav a:hover {
-    background-color: gray;
+.mylinks ul li:not(:last-child),
+.mylinks-head ul li:not(:last-child) {
+    border-bottom: 1px dotted #FFFFFF;
 }
-  
+
+.mylinks ul li,
+.mylinks-head ul li {
+    padding: 10px;
+    list-style: none;
+    text-decoration: none !important;
+    margin: 0;
+  }
+
+.mylinks ul li a,
+.mylinks-head ul li a {
+    font-weight: 600;
+    color: #202020;
+    text-transform: uppercase;
+    color:#FFFFFF;
+}
+
+ul {
+    padding: 0.5em 1em;
+}
+
+.topnav a:hover {
+    color: whitesmoke;
+}
+
+.burger:hover {
+    background-color: gray;
+    border-radius: 3px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1055px) {
+    .burger {
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        margin: 0.5em 0.25em;
+    }
+
+    .mylinks-head {
+        display: none;
+      }
+}
+
+@media (min-width: 1056px) {
+    .burger {
+        display: none;
+    }
+
+    header,
+    .mylinks-head ul {
+        display: flex;
+    }
+
+    header {
+        margin: 0 auto;
+        padding: 0 1em;
+        justify-content: space-between;
+    }
+
+    .topnav {
+        align-items: center;
+    }
+
+    .mylinks-head ul {
+        gap: 1em;
+    }
+
+    .mylinks-head ul li a {
+        font-weight: 600;
+        color: #202020;
+        text-transform: uppercase;
+    }
+
+}

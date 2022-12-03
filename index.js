@@ -10,13 +10,12 @@ function displayHidden() {
 /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 function showMenu() {
     var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
+    if (x.style.display === "flex") {
       x.style.display = "none";
     } else {
-      x.style.display = "block";
-      x.style.fontWeight = 600;
-      x.style.textTransform = "uppercase";
-      x.style.color = "#202020";
-      x.style.textDecoration = "none";
+      x.style.display = "flex";
+      x.style.flexDirection = "column";
+      x.style.backgroundColor = "#202020";
+      x.style.margin = "0 auto"; 
     }
   }
